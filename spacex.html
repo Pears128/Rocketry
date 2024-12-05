@@ -1,0 +1,38 @@
+<div id='ms_frame_container' class="landscape">
+  <iframe
+    id='ms_frame' 
+    loading='lazy' 
+    src='https://embed.mindstamp.com/e/FAPmVaTFRXiJ' 
+    style="position: absolute;top: 0;left: 0; width: 100%; height: 100%; min-height:unset; min-width: unset; border: 0"
+    allowFullscreen 
+    allow='encrypted-media; microphone; camera; geolocation' 
+    scrolling='no'
+    referrerpolicy='no-referrer-when-downgrade'>
+  </iframe>
+</div>
+<script>
+  window.addEventListener("load", (event) => {
+    const container = document.getElementById('ms_frame_container');
+    if (window.innerWidth < (window.innerHeight / 2)){
+      container.classList.add("portrait");
+      container.classList.remove("landscape");
+      console.log('Portrait');
+    } else {
+      console.log('Landscape');
+    }
+  })
+</script>
+<style>
+  .portrait, .landscape{
+    position: relative; 
+    overflow: hidden; 
+  }
+  .portrait{
+    padding-top: 178%;
+    width: 100%; 
+    margin: 0 auto;
+  }
+  .landscape{
+    padding-top: 56.25%;
+  }
+</style><script>window.addEventListener('message', (event) => {if (event.data && event.data.event == 'redirect') {window.location.href = event.data.info.data.link}});</script>
